@@ -98,10 +98,11 @@ model.save("chilitify_densenet_model.h5")
 # Load model
 from tensorflow.keras.models import load_model
 model = load_model("chilitify_densenet_model.h5")
-'''
+```
 
+---
 ## 🧪 Contoh Prediksi Gambar Baru
-'''
+```
 from tensorflow.keras.preprocessing import image
 import numpy as np
 
@@ -113,5 +114,5 @@ img_array = np.expand_dims(img_array, axis=0)
 prediction = model.predict(img_array)
 predicted_class = np.argmax(prediction)
 print("Prediksi:", class_names[predicted_class])
-'''
+```
 
